@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>执行进度信息</title>
 	<script type="text/javascript" src="../js/echarts.min.js"></script>
 </head>
@@ -14,6 +15,7 @@
 		width:100%;
 		height:100%;
 	}
+
 	.bg_color{
 		background-color: #f3f3f3;
 	}
@@ -165,6 +167,23 @@
 	.text_num{
 		font-size:36px;
 	}
+	@media screen and (max-width: 767px){
+		.float-l, .float-r{
+		}
+		.pie_right{
+			width:100%;
+			margin:0;
+		}
+		.pie_item{
+			width:33%;
+			float: left;
+		}
+		.main_field{
+			width:100%;
+			height:70%;
+		}
+
+	}
 </style>
 <body>
 <div class="wrap height_10 width_10 bg_color">
@@ -233,7 +252,6 @@
     	},
    		toolbox: {
         	feature: {
-            	saveAsImage: {}
         	}
     	},
     	series: [
